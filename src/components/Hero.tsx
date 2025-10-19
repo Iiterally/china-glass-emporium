@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, PackageCheck, Rocket, Sparkles } from "lucide-react";
+import heroImage from "@/assets/hero-fashion.jpg";
 
 const Hero = () => {
   const scrollToProducts = () => {
@@ -7,8 +8,18 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 py-20">
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10 animate-pulse" />
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 py-32">
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10" />
+      
+      {/* Floating Hero Image */}
+      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1/2 h-3/4 opacity-30 animate-float hidden lg:block">
+        <img 
+          src={heroImage} 
+          alt="Luxury Fashion" 
+          className="w-full h-full object-contain filter brightness-75"
+        />
+        <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-background" />
+      </div>
       
       <div className="relative z-10 max-w-6xl mx-auto text-center">
         <div className="glass-panel rounded-3xl p-8 md:p-16 mb-12 animate-float">

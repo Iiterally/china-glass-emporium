@@ -1,8 +1,10 @@
 import { useState } from "react";
+import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import ProductGrid from "@/components/ProductGrid";
 import CategoryTabs from "@/components/CategoryTabs";
 import SearchBar from "@/components/SearchBar";
+import DiscordBanner from "@/components/DiscordBanner";
 import Footer from "@/components/Footer";
 import { products, Product } from "@/data/products";
 
@@ -33,6 +35,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
+      <Navigation />
       <Hero />
       
       <section id="products" className="container mx-auto px-4 py-16">
@@ -55,6 +58,10 @@ const Index = () => {
         />
 
         <ProductGrid products={filteredProducts} />
+      </section>
+
+      <section id="about">
+        <DiscordBanner />
       </section>
 
       <Footer />
