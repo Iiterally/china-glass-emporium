@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import { Menu, X, ShoppingBag } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link, useNavigate } from "react-router-dom";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,9 +16,15 @@ const Navigation = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    element?.scrollIntoView({ behavior: "smooth" });
+  const handleNavClick = (id: string) => {
+    if (id === "products") {
+      navigate("/products");
+    } else if (id === "home") {
+      navigate("/");
+    } else {
+      const element = document.getElementById(id);
+      element?.scrollIntoView({ behavior: "smooth" });
+    }
     setIsMobileMenuOpen(false);
   };
 
@@ -37,7 +45,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <button
-            onClick={() => scrollToSection("home")}
+            onClick={() => handleNavClick("home")}
             className="flex items-center gap-3 group"
           >
             <div className="relative">
@@ -55,7 +63,7 @@ const Navigation = () => {
               <Button
                 key={link.id}
                 variant="ghost"
-                onClick={() => scrollToSection(link.id)}
+                onClick={() => handleNavClick(link.id)}
                 className="relative px-6 py-2 text-base font-bold tracking-wide overflow-hidden group hover:bg-transparent"
                 style={{
                   animationDelay: `${index * 100}ms`,
@@ -73,7 +81,7 @@ const Navigation = () => {
           {/* CTA Button */}
           <div className="hidden md:block">
             <Button
-              onClick={() => scrollToSection("products")}
+              onClick={() => navigate("/products")}
               className="relative px-6 py-3 font-bold bg-accent hover:bg-accent/90 glow-border-hover overflow-hidden group"
             >
               <span className="relative z-10">Shop Now</span>
@@ -102,14 +110,14 @@ const Navigation = () => {
                 <Button
                   key={link.id}
                   variant="ghost"
-                  onClick={() => scrollToSection(link.id)}
+                  onClick={() => handleNavClick(link.id)}
                   className="justify-start text-lg font-bold hover:bg-accent/10 hover:text-accent transition-all"
                 >
                   {link.label}
                 </Button>
               ))}
               <Button
-                onClick={() => scrollToSection("products")}
+                onClick={() => navigate("/products")}
                 className="mt-2 font-bold bg-accent hover:bg-accent/90 glow-border-hover"
               >
                 Shop Now

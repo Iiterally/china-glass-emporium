@@ -4,66 +4,75 @@ import { MessageCircle, Users, Sparkles } from "lucide-react";
 const DiscordBanner = () => {
   return (
     <section className="container mx-auto px-4 py-16">
-      <div className="relative glass-panel rounded-3xl p-8 md:p-12 overflow-hidden glow-border-hover">
-        {/* Animated Background Elements */}
-        <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }} />
+      <div className="relative glass-panel rounded-3xl p-8 md:p-16 overflow-hidden border border-primary/10">
+        {/* Subtle Background Gradients */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[#5865F2]/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
         
-        <div className="relative z-10 grid md:grid-cols-2 gap-8 items-center">
-          {/* Left Content */}
-          <div>
-            <div className="flex items-center gap-3 mb-4">
-              <MessageCircle className="w-12 h-12 text-accent animate-float" />
-              <h2 className="text-4xl md:text-5xl font-extrabold glow-text">
+        <div className="relative z-10 max-w-4xl mx-auto text-center">
+          {/* Icon and Title */}
+          <div className="mb-6">
+            <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-[#5865F2]/10 border border-[#5865F2]/20 mb-6">
+              <MessageCircle className="w-10 h-10 text-[#5865F2]" strokeWidth={1.5} />
+            </div>
+            <h2 className="text-4xl md:text-6xl font-extrabold mb-4">
+              <span className="bg-gradient-to-r from-[#5865F2] via-primary to-accent bg-clip-text text-transparent">
                 Join Our Community
-              </h2>
-            </div>
-            
-            <p className="text-xl text-muted-foreground mb-6">
-              Connect with thousands of fashion enthusiasts, get exclusive drops, early access to sales, and insider tips on the latest luxury streetwear trends.
+              </span>
+            </h2>
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
+              Connect with thousands of fashion enthusiasts and get exclusive access to the latest luxury streetwear trends.
             </p>
-
-            <div className="grid grid-cols-2 gap-4 mb-8">
-              <div className="glass-panel rounded-xl p-4 text-center">
-                <Users className="w-8 h-8 text-accent mx-auto mb-2" />
-                <p className="text-2xl font-bold">10K+</p>
-                <p className="text-sm text-muted-foreground">Members</p>
-              </div>
-              <div className="glass-panel rounded-xl p-4 text-center">
-                <Sparkles className="w-8 h-8 text-accent mx-auto mb-2" />
-                <p className="text-2xl font-bold">24/7</p>
-                <p className="text-sm text-muted-foreground">Active Chat</p>
-              </div>
-            </div>
-
-            <Button
-              size="lg"
-              className="w-full md:w-auto text-lg px-8 py-6 bg-[#5865F2] hover:bg-[#4752C4] glow-border-hover group"
-            >
-              <MessageCircle className="mr-2 group-hover:rotate-12 transition-transform" />
-              Join Discord Server
-            </Button>
           </div>
 
-          {/* Right Visual */}
-          <div className="hidden md:flex items-center justify-center">
-            <div className="relative">
-              <div className="glass-panel rounded-3xl p-8 animate-float">
-                <MessageCircle className="w-40 h-40 text-accent" strokeWidth={1.5} />
-              </div>
-              <div className="absolute inset-0 bg-accent/20 blur-3xl animate-glow" />
+          {/* Stats Grid */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+            <div className="glass-panel rounded-2xl p-6 border border-primary/10 hover:border-primary/20 transition-all duration-300">
+              <Users className="w-8 h-8 text-[#5865F2] mx-auto mb-3" />
+              <p className="text-3xl font-bold mb-1">10K+</p>
+              <p className="text-sm text-muted-foreground">Members</p>
+            </div>
+            <div className="glass-panel rounded-2xl p-6 border border-primary/10 hover:border-primary/20 transition-all duration-300">
+              <Sparkles className="w-8 h-8 text-primary mx-auto mb-3" />
+              <p className="text-3xl font-bold mb-1">24/7</p>
+              <p className="text-sm text-muted-foreground">Active Chat</p>
+            </div>
+            <div className="glass-panel rounded-2xl p-6 border border-primary/10 hover:border-primary/20 transition-all duration-300">
+              <MessageCircle className="w-8 h-8 text-accent mx-auto mb-3" />
+              <p className="text-3xl font-bold mb-1">500+</p>
+              <p className="text-sm text-muted-foreground">Daily Messages</p>
+            </div>
+            <div className="glass-panel rounded-2xl p-6 border border-primary/10 hover:border-primary/20 transition-all duration-300">
+              <Sparkles className="w-8 h-8 text-[#5865F2] mx-auto mb-3" />
+              <p className="text-3xl font-bold mb-1">100+</p>
+              <p className="text-sm text-muted-foreground">Exclusive Drops</p>
             </div>
           </div>
-        </div>
 
-        {/* Floating Tags */}
-        <div className="hidden lg:flex absolute top-8 right-8 gap-2">
-          <span className="glass-panel px-4 py-2 rounded-full text-sm font-semibold animate-float">
-            💎 Exclusive Drops
-          </span>
-          <span className="glass-panel px-4 py-2 rounded-full text-sm font-semibold animate-float" style={{ animationDelay: "0.5s" }}>
-            🔥 Early Access
-          </span>
+          {/* CTA Button */}
+          <Button
+            size="lg"
+            className="text-lg px-10 py-7 bg-[#5865F2] hover:bg-[#4752C4] text-white font-bold rounded-xl shadow-lg hover:shadow-[#5865F2]/50 transition-all duration-300 hover:scale-105 group"
+          >
+            <MessageCircle className="mr-3 w-6 h-6 group-hover:rotate-12 transition-transform" />
+            Join Discord Server
+          </Button>
+
+          {/* Feature Tags */}
+          <div className="flex flex-wrap justify-center gap-3 mt-8">
+            <span className="glass-panel px-5 py-2.5 rounded-full text-sm font-semibold border border-primary/10 hover:border-primary/30 transition-all duration-300">
+              💎 Exclusive Drops
+            </span>
+            <span className="glass-panel px-5 py-2.5 rounded-full text-sm font-semibold border border-primary/10 hover:border-primary/30 transition-all duration-300">
+              🔥 Early Access
+            </span>
+            <span className="glass-panel px-5 py-2.5 rounded-full text-sm font-semibold border border-primary/10 hover:border-primary/30 transition-all duration-300">
+              ⚡ Flash Sales
+            </span>
+            <span className="glass-panel px-5 py-2.5 rounded-full text-sm font-semibold border border-primary/10 hover:border-primary/30 transition-all duration-300">
+              🎯 Insider Tips
+            </span>
+          </div>
         </div>
       </div>
     </section>

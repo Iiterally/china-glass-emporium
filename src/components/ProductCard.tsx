@@ -16,7 +16,7 @@ const ProductCard = ({ product, onViewDetails }: ProductCardProps) => {
   };
 
   return (
-    <div className="glass-panel rounded-2xl overflow-hidden group hover:scale-105 transition-all duration-300 glow-border-hover">
+    <div className="glass-panel rounded-2xl overflow-hidden group hover:scale-105 transition-all duration-300 border border-primary/10 hover:border-primary/20">
       <div className="relative overflow-hidden aspect-square">
         <img
           src={product.image}

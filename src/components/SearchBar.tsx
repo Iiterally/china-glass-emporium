@@ -26,15 +26,15 @@ const SearchBar = ({ searchQuery, setSearchQuery, sortBy, setSortBy }: SearchBar
             placeholder="Search products or brands..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="pl-12 glass-panel border-primary/30 focus:border-primary text-foreground h-12"
+            className="pl-12 glass-panel border-primary/20 focus:border-primary/40 text-foreground h-12 transition-all duration-300"
           />
         </div>
         
         <Select value={sortBy} onValueChange={setSortBy}>
-          <SelectTrigger className="w-full md:w-[200px] glass-panel border-primary/30 h-12">
+          <SelectTrigger className="w-full md:w-[200px] glass-panel border-primary/20 hover:border-primary/40 h-12 transition-all duration-300">
             <SelectValue placeholder="Sort by" />
           </SelectTrigger>
-          <SelectContent className="glass-panel border-primary/30">
+          <SelectContent className="glass-panel border-primary/20 bg-background/95 backdrop-blur-xl">
             <SelectItem value="newest">Newest</SelectItem>
             <SelectItem value="price-low">Price: Low to High</SelectItem>
             <SelectItem value="price-high">Price: High to Low</SelectItem>

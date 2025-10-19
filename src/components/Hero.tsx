@@ -1,10 +1,13 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, PackageCheck, Rocket, Sparkles } from "lucide-react";
+import { ArrowRight, ShieldCheck, Truck, Gem } from "lucide-react";
 import heroImage from "@/assets/hero-fashion.jpg";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
-  const scrollToProducts = () => {
-    document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' });
+  const navigate = useNavigate();
+  
+  const handleShopNow = () => {
+    navigate("/products");
   };
 
   return (
@@ -39,7 +42,7 @@ const Hero = () => {
             <Button 
               size="lg"
               className="text-lg px-8 py-6 glow-border-hover bg-primary hover:bg-primary/90"
-              onClick={scrollToProducts}
+              onClick={handleShopNow}
             >
               Shop Now <ArrowRight className="ml-2" />
             </Button>
@@ -47,7 +50,7 @@ const Hero = () => {
               size="lg"
               variant="outline"
               className="text-lg px-8 py-6 glow-border-hover border-primary text-primary hover:bg-primary/10"
-              onClick={scrollToProducts}
+              onClick={handleShopNow}
             >
               Learn More
             </Button>
@@ -55,28 +58,28 @@ const Hero = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="glass-panel rounded-2xl p-6 hover:scale-105 transition-transform duration-300 glow-border-hover">
-            <PackageCheck className="w-12 h-12 text-accent mx-auto mb-4" />
+          <div className="glass-panel rounded-2xl p-6 text-center transform hover:scale-105 transition-all duration-300 border border-primary/10 hover:border-primary/20">
+            <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4 relative">
+              <ShieldCheck className="w-8 h-8 text-primary animate-pulse" style={{ filter: 'drop-shadow(0 0 8px rgb(255, 0, 0)) drop-shadow(0 0 12px rgb(0, 255, 0)) drop-shadow(0 0 16px rgb(0, 0, 255))' }} />
+            </div>
             <h3 className="text-xl font-bold mb-2">Verified Suppliers</h3>
-            <p className="text-muted-foreground">
-              All sellers thoroughly vetted for authenticity and quality
-            </p>
+            <p className="text-muted-foreground">Trusted sources from across Asia</p>
           </div>
 
-          <div className="glass-panel rounded-2xl p-6 hover:scale-105 transition-transform duration-300 glow-border-hover">
-            <Rocket className="w-12 h-12 text-accent mx-auto mb-4" />
+          <div className="glass-panel rounded-2xl p-6 text-center transform hover:scale-105 transition-all duration-300 border border-primary/10 hover:border-primary/20">
+            <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-4 relative">
+              <Truck className="w-8 h-8 text-accent animate-pulse" style={{ filter: 'drop-shadow(0 0 8px rgb(255, 0, 0)) drop-shadow(0 0 12px rgb(0, 255, 0)) drop-shadow(0 0 16px rgb(0, 0, 255))' }} />
+            </div>
             <h3 className="text-xl font-bold mb-2">Fast Worldwide Shipping</h3>
-            <p className="text-muted-foreground">
-              Express delivery options to anywhere in the world
-            </p>
+            <p className="text-muted-foreground">Global delivery in 7-14 days</p>
           </div>
 
-          <div className="glass-panel rounded-2xl p-6 hover:scale-105 transition-transform duration-300 glow-border-hover">
-            <Sparkles className="w-12 h-12 text-accent mx-auto mb-4" />
+          <div className="glass-panel rounded-2xl p-6 text-center transform hover:scale-105 transition-all duration-300 border border-primary/10 hover:border-primary/20">
+            <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4 relative">
+              <Gem className="w-8 h-8 text-primary animate-pulse" style={{ filter: 'drop-shadow(0 0 8px rgb(255, 0, 0)) drop-shadow(0 0 12px rgb(0, 255, 0)) drop-shadow(0 0 16px rgb(0, 0, 255))' }} />
+            </div>
             <h3 className="text-xl font-bold mb-2">Luxury-Grade Quality</h3>
-            <p className="text-muted-foreground">
-              Premium products at unbeatable direct-source prices
-            </p>
+            <p className="text-muted-foreground">Premium materials & craftsmanship</p>
           </div>
         </div>
       </div>
