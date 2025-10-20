@@ -23,10 +23,10 @@ const CategoryTabs = ({ selectedCategory, setSelectedCategory }: CategoryTabsPro
         <button
           key={category.id}
           onClick={() => setSelectedCategory(category.id)}
-          className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
+          className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 border ${
             selectedCategory === category.id
-              ? "glass-panel glow-border text-accent border-b-4 border-accent"
-              : "glass-panel hover:scale-105 hover:glow-border-hover"
+              ? "glass-panel bg-primary/20 border-primary text-primary"
+              : "glass-panel border-primary/10 hover:border-primary/30 hover:bg-primary/5"
           }`}
         >
           {category.label}

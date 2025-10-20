@@ -21,6 +21,8 @@ const Navigation = () => {
       navigate("/products");
     } else if (id === "home") {
       navigate("/");
+    } else if (id === "about") {
+      navigate("/about");
     } else {
       const element = document.getElementById(id);
       element?.scrollIntoView({ behavior: "smooth" });

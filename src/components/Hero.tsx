@@ -25,7 +25,11 @@ const Hero = () => {
       </div>
       
       <div className="relative z-10 max-w-6xl mx-auto text-center">
-        <div className="glass-panel rounded-3xl p-8 md:p-16 mb-12 animate-float">
+        <div className="glass-panel rounded-3xl p-8 md:p-16 mb-12 animate-float border border-primary/10">
+          <div className="inline-block px-6 py-2 rounded-full bg-accent/10 border border-accent/20 mb-6">
+            <span className="text-accent font-semibold">🌏 Direct from Asia's Premium Suppliers</span>
+          </div>
+          
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold mb-6 glow-text leading-tight">
             Discover. Import. Elevate.
           </h1>
@@ -34,14 +38,29 @@ const Hero = () => {
             Buy Luxury Streetwear Directly from China.
           </p>
           
-          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-6">
             AllChina BUY connects you to verified sellers and luxury product sources across Asia — from Chrome Hearts to Balenciaga, SP5DER, and more.
           </p>
+
+          <div className="grid grid-cols-3 gap-6 max-w-2xl mx-auto mb-8 text-sm">
+            <div className="glass-panel rounded-xl p-4 border border-primary/10">
+              <div className="text-3xl font-bold text-accent mb-1">500+</div>
+              <div className="text-muted-foreground">Products</div>
+            </div>
+            <div className="glass-panel rounded-xl p-4 border border-primary/10">
+              <div className="text-3xl font-bold text-accent mb-1">50+</div>
+              <div className="text-muted-foreground">Brands</div>
+            </div>
+            <div className="glass-panel rounded-xl p-4 border border-primary/10">
+              <div className="text-3xl font-bold text-accent mb-1">10K+</div>
+              <div className="text-muted-foreground">Customers</div>
+            </div>
+          </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg"
-              className="text-lg px-8 py-6 glow-border-hover bg-primary hover:bg-primary/90"
+              className="text-lg px-8 py-6 bg-primary hover:bg-primary/90 border border-primary/20"
               onClick={handleShopNow}
             >
               Shop Now <ArrowRight className="ml-2" />
@@ -49,7 +68,7 @@ const Hero = () => {
             <Button 
               size="lg"
               variant="outline"
-              className="text-lg px-8 py-6 glow-border-hover border-primary text-primary hover:bg-primary/10"
+              className="text-lg px-8 py-6 border-primary/30 hover:bg-primary/10"
               onClick={handleShopNow}
             >
               Learn More
