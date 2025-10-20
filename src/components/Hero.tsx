@@ -29,7 +29,7 @@ const Hero = () => {
           <div className="grid md:grid-cols-2 gap-8 items-center mb-8">
             <div className="text-left">
               <div className="inline-block px-6 py-2 rounded-full bg-accent/10 border border-accent/20 mb-6">
-                <span className="text-accent font-semibold">🚀 Your Gateway to AllChinaBuy</span>
+                <span className="text-accent font-semibold">🌍 Your Gateway to AllChinaBuy</span>
               </div>
               
               <h1 className="text-4xl md:text-6xl font-extrabold mb-6 glow-text leading-tight">
@@ -37,11 +37,11 @@ const Hero = () => {
               </h1>
               
               <p className="text-xl md:text-2xl font-semibold mb-4 text-accent">
-                Premium Chinese Shipping Agent Referrals
+                Premium  Shipping Agent Spreadsheet
               </p>
               
               <p className="text-base md:text-lg text-muted-foreground mb-6">
-                Join thousands earning commissions by connecting buyers to AllChinaBuy (ACBuy) - Asia's most trusted shipping agent for luxury streetwear, designer goods, and more.
+                Discover and track the best clothing finds with Flexing.my, a streamlined spreadsheet service featuring luxury streetwear, designer goods, and more from AllChinaBuy.
               </p>
 
               <div className="grid grid-cols-2 gap-4 mb-6">
