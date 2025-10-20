@@ -76,7 +76,7 @@ const Hero = () => {
               <div className="text-xs text-muted-foreground">Clothing Finds</div>
             </div>
             <div className="glass-panel rounded-xl p-3 border border-primary/10">
-              <div className="text-2xl font-bold text-accent mb-1">Search Engine & Filteration System+</div>
+              <div className="text-2xl font-bold text-accent mb-1">$2M+</div>
               <div className="text-xs text-muted-foreground">Orders Shipped</div>
             </div>
             <div className="glass-panel rounded-xl p-3 border border-primary/10">
