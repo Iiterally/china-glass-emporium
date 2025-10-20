@@ -73,15 +73,15 @@ const Hero = () => {
           <div className="grid grid-cols-3 gap-4 max-w-2xl mx-auto mb-8">
             <div className="glass-panel rounded-xl p-3 border border-primary/10">
               <div className="text-2xl font-bold text-accent mb-1">500+</div>
-              <div className="text-xs text-muted-foreground">Active Referrals</div>
+              <div className="text-xs text-muted-foreground">Clothing Finds</div>
             </div>
             <div className="glass-panel rounded-xl p-3 border border-primary/10">
-              <div className="text-2xl font-bold text-accent mb-1">$2M+</div>
+              <div className="text-2xl font-bold text-accent mb-1">Search Engine & Filteration System+</div>
               <div className="text-xs text-muted-foreground">Orders Shipped</div>
             </div>
             <div className="glass-panel rounded-xl p-3 border border-primary/10">
               <div className="text-2xl font-bold text-accent mb-1">7-14</div>
-              <div className="text-xs text-muted-foreground">Days Delivery</div>
+              <div className="text-xs text-muted-foreground">Day Delivery</div>
             </div>
           </div>
           
