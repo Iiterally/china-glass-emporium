@@ -21,7 +21,7 @@ const About = () => {
             </h1>
             
             <p className="text-lg md:text-xl text-center text-muted-foreground max-w-2xl mx-auto mb-8">
-              The premier referral platform connecting you to AllChinaBuy - Asia's most trusted shipping agent for luxury streetwear and designer goods.
+              Flexing.my is a spreadsheet made easy. We combine the best elements of spreadsheets with a sleek, top-of-the-line website UI to make browsing, tracking, and discovering clothing finds simple and effortless.
             </p>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
