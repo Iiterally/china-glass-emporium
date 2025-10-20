@@ -62,17 +62,17 @@ const About = () => {
 
               <div className="glass-panel rounded-xl p-6 border border-primary/10">
                 <DollarSign className="w-10 h-10 text-accent mb-3" />
-                <h3 className="text-xl font-bold mb-2">Earn While Sharing</h3>
+                <h3 className="text-xl font-bold mb-2">Premium Selection</h3>
                 <p className="text-sm text-muted-foreground">
-                  Get 30% commission on every referral sale. Track earnings in real-time and withdraw anytime through your secure dashboard.
+                  Chrome Hearts, Balenciaga, SP5DER, and 500+ luxury brands. From streetwear to designer goods, all at wholesale prices.
                 </p>
               </div>
 
               <div className="glass-panel rounded-xl p-6 border border-primary/10">
                 <Package className="w-10 h-10 text-accent mb-3" />
-                <h3 className="text-xl font-bold mb-2">Premium Selection</h3>
+                <h3 className="text-xl font-bold mb-2">Quality Control</h3>
                 <p className="text-sm text-muted-foreground">
-                  Chrome Hearts, Balenciaga, SP5DER, and 500+ luxury brands. From streetwear to designer goods, all at wholesale prices.
+                  Flexing.my uses AllChinaBuy as our agent of choice. Items are handled with care and delivered in 7–14 days, giving you easy access to the latest clothing and designer finds.
                 </p>
               </div>
             </div>
