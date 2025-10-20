@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X, ShoppingBag } from "lucide-react";
+import { Menu, X, ShoppingBag, UserPlus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -55,7 +55,7 @@ const Navigation = () => {
               <div className="absolute inset-0 bg-accent/20 blur-xl group-hover:blur-2xl transition-all" />
             </div>
             <span className="text-2xl font-extrabold tracking-tight glow-text">
-              AllChina <span className="text-accent">BUY</span>
+              Flexing<span className="text-accent">.my</span>
             </span>
           </button>
 
@@ -84,10 +84,11 @@ const Navigation = () => {
           <div className="hidden md:block">
             <Button
               onClick={() => navigate("/products")}
-              className="relative px-6 py-3 font-bold bg-accent hover:bg-accent/90 glow-border-hover overflow-hidden group"
+              className="relative px-6 py-3 font-bold bg-accent hover:bg-accent/90 overflow-hidden group border border-accent/20"
             >
-              <span className="relative z-10">Shop Now</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-accent via-primary to-accent animate-glow opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <UserPlus className="w-4 h-4 mr-2 relative z-10" />
+              <span className="relative z-10">Sign Up</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-accent/80 via-primary/80 to-accent/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </Button>
           </div>
 
@@ -120,9 +121,10 @@ const Navigation = () => {
               ))}
               <Button
                 onClick={() => navigate("/products")}
-                className="mt-2 font-bold bg-accent hover:bg-accent/90 glow-border-hover"
+                className="mt-2 font-bold bg-accent hover:bg-accent/90 border border-accent/20"
               >
-                Shop Now
+                <UserPlus className="w-4 h-4 mr-2" />
+                Sign Up
               </Button>
             </div>
           </div>
