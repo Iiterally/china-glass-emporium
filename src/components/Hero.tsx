@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, ShieldCheck, Truck, Gem, UserPlus, Search, Sparkles, TrendingUp, Globe, Zap } from "lucide-react";
+import { ArrowRight, ShieldCheck, Truck, Gem, UserPlus, Search, Sparkles, TrendingUp, Globe } from "lucide-react";
 import heroImage from "@/assets/hero-fashion.jpg";
 import { useNavigate } from "react-router-dom";
 
@@ -9,7 +9,6 @@ const Hero = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 py-24 md:py-32">
       {/* Ambient Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-accent/5" />
       <div className="absolute top-20 left-10 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-pulse" />
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
       
@@ -51,7 +50,7 @@ const Hero = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                 <div className="relative">
                   <div className="flex items-center gap-2 mb-1">
-                    <TrendingUp className="w-4 h-4 text-accent" />
+                    <TrendingUp className="w-4 h-4" style={{ color: 'rgb(239, 68, 68)' }} />
                     <div className="text-4xl font-black bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">30%</div>
                   </div>
                   <div className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Commission</div>
@@ -62,7 +61,7 @@ const Hero = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                 <div className="relative">
                   <div className="flex items-center gap-2 mb-1">
-                    <Gem className="w-4 h-4 text-accent" />
+                    <Gem className="w-4 h-4" style={{ color: 'rgb(34, 197, 94)' }} />
                     <div className="text-4xl font-black bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">500+</div>
                   </div>
                   <div className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Products</div>
@@ -73,7 +72,7 @@ const Hero = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                 <div className="relative">
                   <div className="flex items-center gap-2 mb-1">
-                    <Globe className="w-4 h-4 text-accent" />
+                    <Globe className="w-4 h-4" style={{ color: 'rgb(59, 130, 246)' }} />
                     <div className="text-4xl font-black bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">150+</div>
                   </div>
                   <div className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Countries</div>
@@ -127,19 +126,6 @@ const Hero = () => {
                       <Truck className="w-8 h-8 text-accent" />
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Floating Badge */}
-            <div className="absolute -top-6 -right-6 glass-panel rounded-2xl px-6 py-4 border border-accent/30 backdrop-blur-xl shadow-lg">
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent/20 to-primary/20 flex items-center justify-center">
-                  <Zap className="w-6 h-6 text-accent" />
-                </div>
-                <div>
-                  <div className="text-xs text-muted-foreground font-semibold uppercase tracking-wider">Trusted by</div>
-                  <div className="text-xl font-black text-accent">10K+ Users</div>
                 </div>
               </div>
             </div>

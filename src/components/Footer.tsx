@@ -3,7 +3,7 @@ import { Instagram, MessageCircle, Mail, Sparkles } from "lucide-react";
 const Footer = () => {
   return (
     <footer className="relative py-12 px-4">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto w-full">
         <div className="glass-panel rounded-2xl p-10 border border-primary/20 mb-6">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
             {/* Brand with Logo */}

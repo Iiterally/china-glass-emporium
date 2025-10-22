@@ -27,7 +27,7 @@ const ProductCard = ({ product, onViewDetails }: ProductCardProps) => {
           <div className="w-full space-y-2">
             <Button 
               size="sm"
-              className="w-full bg-primary/90 hover:bg-primary border border-primary/20"
+              className="w-full bg-background/20 hover:bg-background/30 border-2 border-primary/30 backdrop-blur-sm"
               onClick={onViewDetails}
             >
               <Eye className="w-4 h-4 mr-2" />
